@@ -1,0 +1,60 @@
+OMNISHIFT(1)                 General Commands Manual                OMNISHIFT(1)
+
+NAME
+       omnishift - Convert image files to a specified format from the command line.
+
+SYNOPSIS
+       omnishift INPUT_PATH OUTPUT_FORMAT
+
+DESCRIPTION
+       Omnishift is a command-line tool for converting images between various formats.
+       The tool supports popular image formats, including JPEG, PNG, BMP, GIF, and TIFF.
+       It is powered by Python's Pillow library and is suitable for quick format conversions.
+
+OPTIONS
+       INPUT_PATH
+              The path to the input image file that you want to convert.
+              This should be a valid path to an image file, such as "image.jpg" or "pictures/sample.png".
+
+       OUTPUT_FORMAT
+              The target format for the converted image. Supported formats include:
+              "png", "jpg", "jpeg", "bmp", "gif", and "tiff".
+              Note that the output format should be provided without the leading dot (e.g., "png" instead of ".png").
+
+EXAMPLES
+       Convert a PNG file to JPEG format:
+              omnishift input_image.png jpg
+
+       Convert a TIFF file to GIF format:
+              omnishift sample_image.tiff gif
+
+       Convert a BMP file to PNG format:
+              omnishift picture.bmp png
+
+SUPPORTED FORMATS
+       Omnishift supports the following output formats:
+       - JPEG (jpg or jpeg)
+       - PNG
+       - BMP
+       - GIF
+       - TIFF
+
+NOTES
+       - When converting to JPEG format, omnishift will automatically convert the image to RGB mode if needed,
+         as JPEG does not support transparency or other modes.
+       - If the specified output format is not in the supported list, omnishift will return an error.
+
+ERRORS
+       If an error occurs, such as if the input file does not exist or the format is unsupported, omnishift will print
+       an error message to the terminal and stop processing.
+
+SEE ALSO
+       convert(1), imagemagick(1), pillow(3)
+
+AUTHOR
+       Omnishift was created using Python and the Pillow library for educational purposes.
+
+COPYRIGHT
+       Free software. You may modify and redistribute this tool with attribution.
+
+Version 1.0                                                      October 2024
